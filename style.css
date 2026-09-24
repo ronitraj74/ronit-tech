@@ -1,0 +1,258 @@
+/*
+    Minimal personal homepage
+    Inspired by the clean typography/layout
+    of navyabijoy.tech
+*/
+
+
+/* ------------------------------
+   RESET
+------------------------------ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ------------------------------
+   PAGE
+------------------------------ */
+
+html {
+    background: #ffffff;
+}
+
+body {
+    background: #ffffff;
+
+    color: #202020;
+
+    /*
+        Native system typography.
+        No Google Font is imported intentionally.
+    */
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Helvetica,
+        Arial,
+        sans-serif;
+
+    font-size: 15px;
+
+    font-weight: 400;
+
+    line-height: 1.65;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    text-rendering: optimizeLegibility;
+}
+
+
+/* ------------------------------
+   TOP-CENTERED CONTENT
+------------------------------ */
+
+.page {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+
+    /*
+        Keeps the writing near
+        the top of the page.
+    */
+    padding-top: 52px;
+
+    padding-bottom: 80px;
+}
+
+
+/*
+    This is the important part.
+
+    The whole text column is centered
+    horizontally, while the text itself
+    remains left aligned.
+*/
+
+.content {
+    width: 100%;
+
+    max-width: 700px;
+
+    padding-left: 24px;
+    padding-right: 24px;
+
+    text-align: left;
+}
+
+
+/* ------------------------------
+   PARAGRAPHS
+------------------------------ */
+
+.content p {
+    margin-bottom: 25px;
+}
+
+
+/*
+    Small separation after "hi"
+*/
+
+.content p:first-child {
+    margin-bottom: 24px;
+}
+
+
+/* ------------------------------
+   BOLD TEXT
+------------------------------ */
+
+strong {
+    font-weight: 500;
+}
+
+
+/* ------------------------------
+   LINKS
+------------------------------ */
+
+a {
+    color: #202020;
+
+    text-decoration-line: underline;
+
+    text-decoration-thickness: 1px;
+
+    text-underline-offset: 3px;
+
+    transition:
+        opacity 0.15s ease;
+}
+
+
+a:hover {
+    opacity: 0.5;
+}
+
+
+/* ------------------------------
+   BOTTOM LINKS
+------------------------------ */
+
+.links {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    align-items: center;
+
+    gap: 17px;
+
+    margin-top: 38px;
+
+    padding-top: 22px;
+
+    border-top: 1px solid #e7e7e7;
+}
+
+
+.links a {
+    font-size: 14px;
+
+    text-decoration: none;
+
+    color: #333333;
+}
+
+
+.links a:hover {
+    color: #000000;
+
+    opacity: 0.55;
+}
+
+
+/* ------------------------------
+   LARGE SCREENS
+------------------------------ */
+
+@media (min-width: 1000px) {
+
+    .page {
+        padding-top: 58px;
+    }
+
+    .content {
+        max-width: 700px;
+    }
+}
+
+
+/* ------------------------------
+   TABLET
+------------------------------ */
+
+@media (max-width: 800px) {
+
+    .page {
+        padding-top: 45px;
+    }
+
+    .content {
+        max-width: 660px;
+
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}
+
+
+/* ------------------------------
+   MOBILE
+------------------------------ */
+
+@media (max-width: 600px) {
+
+    body {
+        font-size: 15px;
+
+        line-height: 1.7;
+    }
+
+    .page {
+        padding-top: 32px;
+
+        padding-bottom: 50px;
+    }
+
+    .content {
+        width: 100%;
+
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .content p {
+        margin-bottom: 23px;
+    }
+
+    .links {
+        gap: 14px;
+
+        margin-top: 34px;
+    }
+
+    .links a {
+        font-size: 14px;
+    }
+}
